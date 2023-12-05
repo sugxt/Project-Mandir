@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2clvytwemvsq"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://bcd8yjvouk7aw"
+path="res://.godot/imported/JoyStick-Inner.png-0ba4a469bb04b4add42f9bad3fe83d43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://Assets/JoyStick-Inner.png"
+dest_files=["res://.godot/imported/JoyStick-Inner.png-0ba4a469bb04b4add42f9bad3fe83d43.ctex"]
 
 [params]
 
