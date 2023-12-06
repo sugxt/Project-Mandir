@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://csgvky2ef1u48"]
+[gd_scene load_steps=3 format=3 uid="uid://csgvky2ef1u48"]
 
 [ext_resource type="PackedScene" uid="uid://cx5n6xeak5osf" path="res://Scenes/Character.tscn" id="1_bq4t2"]
+[ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_mdosw"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.5, 3.50001)
+scale = Vector2(3.3, 1.86571)
+texture = ExtResource("1_mdosw")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_bq4t2")]
 position = Vector2(-1, 38)
@@ -10,3 +16,4 @@ position = Vector2(-1, 38)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(1, -37)
 position_smoothing_enabled = true
+position_smoothing_speed = 8.0

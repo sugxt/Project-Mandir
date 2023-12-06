@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var MAXSPEED = 400
-@export var ACCELERATION = 1500
+@export var ACCELERATION = 1800
 @export var FRICTION = 1200
 
 @onready var axis = Vector2.ZERO
@@ -30,6 +30,6 @@ func apply_friction(amount):
 		velocity= Vector2.ZERO
 
 func apply_movement(accel):
-	velocity += accel
+	velocity += accel * 2
 	velocity = velocity.limit_length(MAXSPEED)
 	

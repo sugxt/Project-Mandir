@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bji23rafi4ypk"]
+
+[ext_resource type="Texture2D" uid="uid://bcd8yjvouk7aw" path="res://Assets/JoyStick-Inner.png" id="1_1781h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwpsg"]
+height = 100.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.273217, 1)
+texture = ExtResource("1_1781h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fwpsg")
