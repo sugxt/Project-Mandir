@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	look_at(get_global_mouse_position().normalized())
+	look_at(get_global_mouse_position())
 	return input_direction.normalized()
 
 func _physics_process(delta):
