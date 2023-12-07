@@ -1,17 +1,19 @@
 2a60927148abd1d33b818b535e306557
-::res://::1701865487
-default_env.tres::Environment::8113903724890298971::1701865487::0::1::::<><>::
+::res://::1701921004
+default_env.tres::Environment::8113903724890298971::1701874928::0::1::::<><>::
 icon.png::CompressedTexture2D::1899934213244536424::1701766590::1701781193::1::::<><>::
 README.md::TextFile::-1::1701767355::0::1::::<><>::
 README_PT-BR.md::TextFile::-1::1701767856::0::1::::<><>::
-::res://Assets/::1701865714
+::res://Assets/::1701872718
+ezgif.com-gif-maker.png::CompressedTexture2D::1335688620273615753::1701872718::1701872718::1::::<><>::
 JoyStick-Inner.png::CompressedTexture2D::2535038529860652710::1701784454::1701784457::1::::<><>::
 JoyStick-Outer.png::CompressedTexture2D::7824589744334776623::1701769021::1701781193::1::::<><>::
 MainGuy.png::CompressedTexture2D::9068303808432021803::1701865714::1701865716::1::::<><>::
-::res://Scenes/::1701865487
-Character.gd::GDScript::-1::1701865398::0::1::::<>CharacterBody2D<>::
-Character.tscn::PackedScene::6449961998430586289::1701865487::0::1::::<><>::res://Scenes/Character.gd<>uid://bcd8yjvouk7aw
-Main Scene.tscn::PackedScene::6049921036641880491::1701865487::0::1::::<><>::uid://cx5n6xeak5osf<>uid://djqj35qtcrbit
+::res://Scenes/::1701874928
+Character.gd::GDScript::-1::1701874899::0::1::::<>CharacterBody2D<>::
+Character.tscn::PackedScene::6449961998430586289::1701874928::0::1::::<><>::res://Scenes/Character.gd<>uid://tbaujqcayf1b
+Khukri.tscn::PackedScene::3036325552637890672::1701874900::0::1::::<><>::uid://bcd8yjvouk7aw
+Main Scene.tscn::PackedScene::6049921036641880491::1701874900::0::1::::<><>::uid://cx5n6xeak5osf<>uid://djqj35qtcrbit
 ::res://Scripts/::1701771831
 Joystick.gd::GDScript::-1::1701781168::0::1::::<>Node2D<>::
 Knob.gd::GDScript::-1::1701781168::0::1::::<>Sprite2D<>::
