@@ -1,20 +1,22 @@
 2a60927148abd1d33b818b535e306557
-::res://::1702101120
-default_env.tres::Environment::8113903724890298971::1701928057::0::1::::<><>::
+::res://::1702126014
+default_env.tres::Environment::8113903724890298971::1702126014::0::1::::<><>::
 icon.png::CompressedTexture2D::1899934213244536424::1701766590::1701781193::1::::<><>::
 README.md::TextFile::-1::1701767355::0::1::::<><>::
 README_PT-BR.md::TextFile::-1::1701767856::0::1::::<><>::
-::res://Assets/::1701872718
+::res://Assets/::1702126686
 ezgif.com-gif-maker.png::CompressedTexture2D::1335688620273615753::1701872718::1701872718::1::::<><>::
 JoyStick-Inner.png::CompressedTexture2D::2535038529860652710::1701784454::1701784457::1::::<><>::
 JoyStick-Outer.png::CompressedTexture2D::7824589744334776623::1701769021::1701781193::1::::<><>::
 MainGuy.png::CompressedTexture2D::9068303808432021803::1701865714::1701865716::1::::<><>::
-::res://Scenes/::1701928057
-Character.gd::GDScript::-1::1701927317::0::1::::<>CharacterBody2D<>::
-Character.tscn::PackedScene::6449961998430586289::1701928029::0::1::::<><>::res://Scenes/Character.gd<>uid://bji23rafi4ypk<>uid://tbaujqcayf1b
+Motion.png::CompressedTexture2D::554249151056625305::1702125232::1702125244::1::::<><>::
+spritesheet.png::CompressedTexture2D::5599038099789978012::1702126665::1702126689::1::::<><>::
+::res://Scenes/::1702126014
+Character.gd::GDScript::-1::1702126013::0::1::::<>CharacterBody2D<>::
+Character.tscn::PackedScene::6449961998430586289::1702126014::0::1::::<><>::res://Scenes/Character.gd<>uid://bji23rafi4ypk<>uid://h5qnxlqfaye8
 Khukri.gd::GDScript::-1::1701927359::0::1::::<>Area2D<>::
-Khukri.tscn::PackedScene::3036325552637890672::1701928029::0::1::::<><>::uid://bcd8yjvouk7aw<>res://Scenes/Khukri.gd
-Main Scene.tscn::PackedScene::6049921036641880491::1701928057::0::1::::<><>::uid://cx5n6xeak5osf<>uid://djqj35qtcrbit
+Khukri.tscn::PackedScene::3036325552637890672::1702126014::0::1::::<><>::uid://bcd8yjvouk7aw<>res://Scenes/Khukri.gd
+Main Scene.tscn::PackedScene::6049921036641880491::1702126014::0::1::::<><>::uid://cx5n6xeak5osf<>uid://djqj35qtcrbit
 ::res://Scripts/::1701771831
 Joystick.gd::GDScript::-1::1701781168::0::1::::<>Node2D<>::
 Knob.gd::GDScript::-1::1701781168::0::1::::<>Sprite2D<>::

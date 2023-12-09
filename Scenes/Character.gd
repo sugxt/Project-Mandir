@@ -39,7 +39,7 @@ func move(delta):
 		$Sprite2D/AnimationPlayer.play("idle_animation")
 	else:
 		apply_movement(axis * ACCELERATION * delta)
-		$Sprite2D/AnimationPlayer.stop()
+		$Sprite2D/AnimationPlayer.play("walking_animation")
 
 func apply_friction(amount):
 	if velocity.length() > amount:
