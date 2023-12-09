@@ -49,3 +49,7 @@ shape = SubResource("CapsuleShape2D_7qn8d")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(125, 37)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
