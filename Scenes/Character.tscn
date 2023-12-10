@@ -55,7 +55,6 @@ projectile = ExtResource("2_cf132")
 rotation = 1.5708
 texture = ExtResource("3_u6yqh")
 hframes = 15
-frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {
@@ -66,7 +65,7 @@ libraries = {
 shape = SubResource("CapsuleShape2D_7qn8d")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(125, 37)
+position = Vector2(73, 37)
 
 [node name="Timer" type="Timer" parent="."]
 

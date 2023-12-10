@@ -1,5 +1,7 @@
 res://default_env.tres
 res://Scenes/Main Scene.tscn
-res://Scenes/Character.gd
 res://Scenes/Khukri.tscn
 res://Scenes/Character.tscn
+res://Scenes/Character.gd
+res://Scenes/Khukri.gd
+res://Scenes/Kurkri.tscn

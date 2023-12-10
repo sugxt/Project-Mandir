@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://csgvky2ef1u48"]
+[gd_scene load_steps=4 format=3 uid="uid://csgvky2ef1u48"]
 
 [ext_resource type="PackedScene" uid="uid://cx5n6xeak5osf" path="res://Scenes/Character.tscn" id="1_bq4t2"]
 [ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_mdosw"]
+[ext_resource type="PackedScene" uid="uid://bedour3mta5fv" path="res://Scenes/Kurkri.tscn" id="3_84htg"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.34902, 0.196078)
 position = Vector2(-1.5, 3.50001)
 scale = Vector2(3.3, 1.86571)
 texture = ExtResource("1_mdosw")
@@ -19,3 +21,6 @@ position = Vector2(1, -37)
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_84htg")]
+position = Vector2(577, -23)
