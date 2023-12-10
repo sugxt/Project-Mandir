@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx5n6xeak5osf"]
+[gd_scene load_steps=8 format=3 uid="uid://dltmo82lb40fm"]
 
-[ext_resource type="Script" path="res://Scenes/Character.gd" id="1_nhxp1"]
-[ext_resource type="PackedScene" uid="uid://bji23rafi4ypk" path="res://Scenes/Khukri.tscn" id="2_cf132"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="1_x5avv"]
+[ext_resource type="PackedScene" uid="uid://rc5qv8cbifbv" path="res://Scenes/Khukri.tscn" id="2_cf132"]
 [ext_resource type="Texture2D" uid="uid://cl1hlsoxdym57" path="res://Assets/spritesheet.png" id="3_u6yqh"]
 
 [sub_resource type="Animation" id="Animation_c1046"]
@@ -48,7 +48,7 @@ height = 126.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(513, 288)
-script = ExtResource("1_nhxp1")
+script = ExtResource("1_x5avv")
 projectile = ExtResource("2_cf132")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

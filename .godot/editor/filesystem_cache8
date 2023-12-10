@@ -1,6 +1,6 @@
 2a60927148abd1d33b818b535e306557
-::res://::1702184422
-default_env.tres::Environment::8113903724890298971::1702183052::0::1::::<><>::
+::res://::1702186595
+default_env.tres::Environment::8113903724890298971::1702186603::0::1::::<><>::
 icon.png::CompressedTexture2D::1899934213244536424::1701766590::1701781193::1::::<><>::
 README.md::TextFile::-1::1701767355::0::1::::<><>::
 README_PT-BR.md::TextFile::-1::1701767856::0::1::::<><>::
@@ -12,13 +12,14 @@ Kukuri.png::CompressedTexture2D::8781190825292805682::1702130034::1702133428::1:
 MainGuy.png::CompressedTexture2D::9068303808432021803::1701865714::1701865716::1::::<><>::
 Motion.png::CompressedTexture2D::554249151056625305::1702125232::1702125244::1::::<><>::
 spritesheet.png::CompressedTexture2D::5599038099789978012::1702126665::1702126689::1::::<><>::
-::res://Scenes/::1702183052
-Character.gd::GDScript::-1::1702181255::0::1::::<>CharacterBody2D<>::
-Character.tscn::PackedScene::6449961998430586289::1702183042::0::1::::<><>::res://Scenes/Character.gd<>uid://bji23rafi4ypk<>uid://cl1hlsoxdym57
-Khukri.gd::GDScript::-1::1702182980::0::1::::<>Area2D<>::
-Khukri.tscn::PackedScene::3036325552637890672::1702183042::0::1::::<><>::uid://bcd8yjvouk7aw<>res://Scenes/Khukri.gd
-Kurkri.tscn::PackedScene::2674255882006364775::1702183042::0::1::::<><>::uid://dxdw6vasmleva
-Main Scene.tscn::PackedScene::6049921036641880491::1702183052::0::1::::<><>::uid://cx5n6xeak5osf<>uid://djqj35qtcrbit<>uid://bedour3mta5fv
-::res://Scripts/::1701771831
+::res://Scenes/::1702186595
+Character.tscn::PackedScene::7971317888935230130::1702186580::0::1::::<><>::res://Scripts/Character.gd<>uid://bji23rafi4ypk<>uid://cl1hlsoxdym57
+Khukri.tscn::PackedScene::1199190333901568539::1702186591::0::1::::<><>::uid://bcd8yjvouk7aw<>res://Scripts/Khukri.gd
+Kurkri.gd::GDScript::-1::1702186231::0::1::::<>CharacterBody2D<>::
+Main Scene.tscn::PackedScene::-1::1702186595::0::1::::<><>::uid://dltmo82lb40fm<>uid://djqj35qtcrbit<>uid://bedour3mta5fv
+::res://Scripts/::1702186595
+Character.gd::GDScript::-1::1702185586::0::1::::<>CharacterBody2D<>::
 Joystick.gd::GDScript::-1::1701781168::0::1::::<>Node2D<>::
+Khukri.gd::GDScript::-1::1702185586::0::1::::<>Area2D<>::
 Knob.gd::GDScript::-1::1701781168::0::1::::<>Sprite2D<>::
+Kurkri.tscn::PackedScene::2674255882006364775::1702186603::0::1::::<><>::res://Scenes/Kurkri.gd<>uid://dxdw6vasmleva
