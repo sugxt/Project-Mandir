@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var MAXSPEED = 400
-@export var ACCELERATION = 1800
+@export var ACCELERATION = 1200
 @export var FRICTION = 1200
 @export var projectile: PackedScene
 @export var shootingDelay: float = 0.3

@@ -14,5 +14,5 @@ func _on_timer_timeout():
 
 
 func _on_body_entered(body):
-	body.queue_free()
+	body.onDamage(100)
 	queue_free()
