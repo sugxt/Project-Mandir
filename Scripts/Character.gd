@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var player_health = 1200
 @export var MAXSPEED = 400
 @export var ACCELERATION = 1200
 @export var FRICTION = 1200
@@ -36,10 +37,10 @@ func move(delta):
 
 	if axis == Vector2.ZERO:
 		apply_friction(FRICTION * delta)
-		$Sprite2D/AnimationPlayer.play("idle_animation")
+		$AnimatedSprite2D.play("idle")
 	else:
 		apply_movement(axis * ACCELERATION * delta)
-		$Sprite2D/AnimationPlayer.play("walking_animation")
+		$AnimatedSprite2D.play("running")
 
 func apply_friction(amount):
 	if velocity.length() > amount:
@@ -53,9 +54,9 @@ func apply_movement(accel):
 
 func shoot():
 	if canShoot:
+		$UpperShoot.play("throwing")
 		var b = projectile.instantiate()
 		owner.add_child(b)
 		b.transform = $Marker2D.global_transform
 		canShoot = false
 		shootTimer.start()
-

@@ -5,6 +5,7 @@ extends Area2D
 func _ready():
 	$Timer.wait_time = time_to_live
 	$Timer.start()
+	$AnimatedSprite2D.play("throw")
 func _physics_process(delta):
 	position += transform.x * speed * delta
 
@@ -14,5 +15,7 @@ func _on_timer_timeout():
 
 
 func _on_body_entered(body):
+	if body.name == "Player":
+		return
 	body.onDamage(100)
 	queue_free()
