@@ -191,8 +191,9 @@ position = Vector2(47, 42)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="UpperShoot" type="AnimatedSprite2D" parent="."]
-position = Vector2(10.508, 0)
+position = Vector2(9.176, 0.72)
 rotation = 1.5708
+scale = Vector2(0.918182, 0.918182)
 sprite_frames = SubResource("SpriteFrames_smov7")
 animation = &"throwing"
 frame = 5

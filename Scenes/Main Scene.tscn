@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c36uvb6q0x0rb"]
+[gd_scene load_steps=4 format=3 uid="uid://dni0cf4jkkw7w"]
 
 [ext_resource type="PackedScene" uid="uid://dltmo82lb40fm" path="res://Scenes/Character.tscn" id="1_bq4t2"]
 [ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_mdosw"]
-[ext_resource type="PackedScene" uid="uid://dxix6os1mjax8" path="res://Scripts/Kurkri.tscn" id="3_84htg"]
+[ext_resource type="PackedScene" uid="uid://dxix6os1mjax8" path="res://Scenes/Kurkri.tscn" id="3_84htg"]
 
 [node name="Main" type="Node2D"]
 

@@ -60,3 +60,9 @@ func shoot():
 		b.transform = $Marker2D.global_transform
 		canShoot = false
 		shootTimer.start()
+func onDamage(damage):
+	print("Damage Called")
+	player_health -= damage
+	if player_health <=0:
+		print("Death")
+		get_tree().reload_current_scene()
