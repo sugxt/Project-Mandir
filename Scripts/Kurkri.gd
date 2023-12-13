@@ -17,8 +17,8 @@ func onDamage(damage_number):
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Player":
-		body.onDamage(500)
+		body.on_damage(500)
 		if $Area2D.has_overlapping_bodies():
 			await get_tree().create_timer(1).timeout
-			body.onDamage(200) # Change it so the damage keeps happening instead of once
+			body.on_damage(200) # Change it so the damage keeps happening instead of once
 		

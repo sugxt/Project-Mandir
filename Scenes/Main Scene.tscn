@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dni0cf4jkkw7w"]
+[gd_scene load_steps=5 format=3 uid="uid://dni0cf4jkkw7w"]
 
 [ext_resource type="PackedScene" uid="uid://dltmo82lb40fm" path="res://Scenes/Character.tscn" id="1_bq4t2"]
 [ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_mdosw"]
 [ext_resource type="PackedScene" uid="uid://dxix6os1mjax8" path="res://Scenes/Kurkri.tscn" id="3_84htg"]
+[ext_resource type="PackedScene" uid="uid://cl3nma1mvb1pj" path="res://Scenes/gun_pickup.tscn" id="4_80d6l"]
 
 [node name="Main" type="Node2D"]
 
@@ -14,7 +15,8 @@ texture = ExtResource("1_mdosw")
 
 [node name="Player" parent="." instance=ExtResource("1_bq4t2")]
 position = Vector2(-1, 38)
-ACCELERATION = 800
+collision_layer = 2
+collision_mask = 5
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, -37)
@@ -24,3 +26,5 @@ position_smoothing_speed = 3.0
 
 [node name="Enemy" parent="." instance=ExtResource("3_84htg")]
 position = Vector2(1326, -308)
+
+[node name="Node2D" parent="." instance=ExtResource("4_80d6l")]
