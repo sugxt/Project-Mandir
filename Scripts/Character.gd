@@ -8,19 +8,16 @@ extends CharacterBody2D
 @export var shooting_delay: float = 0.7
 var has_gun: bool = false
 var can_shoot: bool = true
-var shoot_timer: Timer
 var gun_ammo: int = 0
 
 @onready var axis = Vector2.ZERO
 
-func _ready():
-	shoot_timer = $Timer
-	shoot_timer.wait_time = shooting_delay
-
 func get_input():
-	if Input.is_action_just_pressed("shoot") and can_shoot:
-		shoot_timer.start()
+	if Input.is_action_just_pressed("shoot") and can_shoot and !has_gun:
 		shoot()
+	if has_gun and can_shoot:
+		if Input.is_action_just_pressed("shoot"):
+			shoot_gun()
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	look_at(get_global_mouse_position())
 	return input_direction.normalized()
@@ -71,23 +68,25 @@ func apply_movement(accel):
 	velocity = velocity.limit_length(max_speed)
 
 func shoot():
-	if has_gun and gun_ammo>0:
-		gun_ammo -= 1
-		var b = projectile.instantiate()
-		owner.add_child(b)
-		b.transform = $Marker2D.global_transform
-		await get_tree().create_timer(1).timeout
-		if gun_ammo <=0:
-			has_gun = false
-		return
 	if can_shoot:
 		$UpperShoot.play("throwing")
 		var b = projectile.instantiate()
 		owner.add_child(b)
 		b.transform = $Marker2D.global_transform
 		can_shoot = false
-		shoot_timer.start()
-
+		await get_tree().create_timer(0.7).timeout
+		can_shoot = true
+func shoot_gun():
+	if can_shoot and gun_ammo>0:
+		gun_ammo -= 1
+		var a = projectile.instantiate()
+		owner.add_child(a)
+		a.transform = $Marker2D.global_transform
+		can_shoot = false
+		await get_tree().create_timer(0.2).timeout
+		can_shoot = true
+		if gun_ammo <= 0:
+			has_gun = false
 func on_damage(damage):
 	print("Damage Called")
 	player_health -= damage
