@@ -1,6 +1,6 @@
 2a60927148abd1d33b818b535e306557
-::res://::1702561950
-default_env.tres::Environment::8113903724890298971::1702481413::0::1::::<><>::
+::res://::1702714149
+default_env.tres::Environment::8113903724890298971::1702703841::0::1::::<><>::
 icon.png::CompressedTexture2D::1899934213244536424::1701766590::1701781193::1::::<><>::
 README.md::TextFile::-1::1701767355::0::1::::<><>::
 README_PT-BR.md::TextFile::-1::1701767856::0::1::::<><>::
@@ -16,15 +16,15 @@ MainGuy.png::CompressedTexture2D::9068303808432021803::1701865714::1701865716::1
 Motion.png::CompressedTexture2D::554249151056625305::1702125232::1702125244::1::::<><>::
 spritesheet.png::CompressedTexture2D::5599038099789978012::1702126665::1702126689::1::::<><>::
 Throw.png::CompressedTexture2D::3919988192692694560::1702266003::1702266077::1::::<><>::
-::res://Scenes/::1702481413
-Character.tscn::PackedScene::7971317888935230130::1702481413::0::1::::<><>::res://Scripts/Character.gd<>uid://rc5qv8cbifbv<>uid://cl1hlsoxdym57<>uid://dnpmfppuwj2t8<>uid://bv34vrshcv2h5<>uid://cbo8ht6wmouep
+::res://Scenes/::1702703841
+Character.tscn::PackedScene::7971317888935230130::1702703840::0::1::::<><>::res://Scripts/Character.gd<>uid://rc5qv8cbifbv<>uid://cl1hlsoxdym57<>uid://dnpmfppuwj2t8<>uid://bv34vrshcv2h5<>uid://cbo8ht6wmouep
 gun_pickup.gd::GDScript::-1::1702479704::0::1::::<>Area2D<>::
-gun_pickup.tscn::PackedScene::5603532015689327687::1702481225::0::1::::<><>::uid://djqj35qtcrbit<>res://Scenes/gun_pickup.gd
-Khukri.tscn::PackedScene::1199190333901568539::1702481225::0::1::::<><>::res://Scripts/Khukri.gd<>uid://deo7x0pbw8iiq
-Kurkri.tscn::PackedScene::8791573091562299767::1702481225::0::1::::<><>::res://Scripts/Kurkri.gd<>uid://dxdw6vasmleva
-Main Scene.tscn::PackedScene::8089753844651954302::1702481225::0::1::::<><>::uid://dltmo82lb40fm<>uid://djqj35qtcrbit<>uid://dxix6os1mjax8<>uid://cl3nma1mvb1pj
-::res://Scripts/::1702481282
-Character.gd::GDScript::-1::1702481282::0::1::::<>CharacterBody2D<>::
+gun_pickup.tscn::PackedScene::5603532015689327687::1702703841::0::1::::<><>::uid://djqj35qtcrbit<>res://Scenes/gun_pickup.gd
+Khukri.tscn::PackedScene::1199190333901568539::1702703840::0::1::::<><>::res://Scripts/Khukri.gd<>uid://deo7x0pbw8iiq
+Kurkri.tscn::PackedScene::8791573091562299767::1702703840::0::1::::<><>::res://Scripts/Kurkri.gd<>uid://dxdw6vasmleva
+Main Scene.tscn::PackedScene::8089753844651954302::1702703841::0::1::::<><>::uid://dltmo82lb40fm<>uid://djqj35qtcrbit<>uid://dxix6os1mjax8<>uid://cl3nma1mvb1pj
+::res://Scripts/::1702562803
+Character.gd::GDScript::-1::1702562803::0::1::::<>CharacterBody2D<>::
 Joystick.gd::GDScript::-1::1701781168::0::1::::<>Node2D<>::
 Khukri.gd::GDScript::-1::1702269168::0::1::::<>Area2D<>::
 Knob.gd::GDScript::-1::1701781168::0::1::::<>Sprite2D<>::

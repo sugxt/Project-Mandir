@@ -98,3 +98,7 @@ func get_item(item):
 	if item == "Gun":
 		has_gun = true
 		gun_ammo = 10
+	if item == "Speed":
+		max_speed = 800
+		await get_tree().create_timer(20).timeout
+		max_speed = 400

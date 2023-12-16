@@ -1,7 +1,9 @@
+res://Speed Pickup.gd
 res://default_env.tres
-res://Scenes/Character.tscn
 res://Scripts/Character.gd
+res://Scenes/speed_pickup.tscn
+res://Scenes/Character.tscn
+res://Scenes/Main Scene.tscn
 res://Scenes/Khukri.tscn
 res://Scenes/Kurkri.tscn
-res://Scenes/Main Scene.tscn
 res://Scenes/gun_pickup.tscn
