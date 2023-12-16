@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl3nma1mvb1pj"]
+[gd_scene load_steps=4 format=3 uid="uid://i2mn8ydv7ni3"]
 
+[ext_resource type="Script" path="res://gun_pickup.gd" id="1_4b00f"]
 [ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_d7jc0"]
-[ext_resource type="Script" path="res://Scenes/gun_pickup.gd" id="1_ffyqy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sot48"]
 radius = 33.0606
@@ -10,7 +10,7 @@ radius = 33.0606
 position = Vector2(330, 189)
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_ffyqy")
+script = ExtResource("1_4b00f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -1)
