@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxm6iiinbl2jw"]
+
+[ext_resource type="Script" path="res://Bullet.gd" id="1_0cvov"]
+[ext_resource type="Texture2D" uid="uid://dvusg0301ml6q" path="res://Assets/Entities/Bullet.png" id="2_iu2co"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yr4jv"]
+radius = 5.99868
+height = 41.9908
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lxpp"]
+atlas = ExtResource("2_iu2co")
+region = Rect2(0, 0, 48, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yehrv"]
+atlas = ExtResource("2_iu2co")
+region = Rect2(48, 0, 48, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fokby"]
+atlas = ExtResource("2_iu2co")
+region = Rect2(96, 0, 48, 127)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hxeh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lxpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yehrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fokby")
+}],
+"loop": true,
+"name": &"BulletAnim",
+"speed": 23.0
+}]
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_0cvov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.54985
+shape = SubResource("CapsuleShape2D_yr4jv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_8hxeh")
+animation = &"BulletAnim"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

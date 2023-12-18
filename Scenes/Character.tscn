@@ -1,11 +1,13 @@
-[gd_scene load_steps=47 format=3 uid="uid://dltmo82lb40fm"]
+[gd_scene load_steps=54 format=3 uid="uid://dltmo82lb40fm"]
 
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="1_x5avv"]
 [ext_resource type="PackedScene" uid="uid://rc5qv8cbifbv" path="res://Scenes/Khukri.tscn" id="2_cf132"]
+[ext_resource type="PackedScene" uid="uid://dxm6iiinbl2jw" path="res://Scenes/bullet.tscn" id="3_s8sop"]
 [ext_resource type="Texture2D" uid="uid://cl1hlsoxdym57" path="res://Assets/spritesheet.png" id="3_u6yqh"]
 [ext_resource type="Texture2D" uid="uid://dnpmfppuwj2t8" path="res://Assets/gun_idle.png" id="4_856bi"]
 [ext_resource type="Texture2D" uid="uid://bv34vrshcv2h5" path="res://Assets/Throw.png" id="4_jo635"]
 [ext_resource type="Texture2D" uid="uid://cbo8ht6wmouep" path="res://Assets/gun_walking.png" id="5_clgvm"]
+[ext_resource type="Texture2D" uid="uid://ojwxvtv8brjv" path="res://Assets/Entities/Muzzle_Flash.png" id="7_f11hv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qn8d"]
 radius = 35.0
@@ -301,12 +303,49 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k0fn"]
+atlas = ExtResource("7_f11hv")
+region = Rect2(0, 0, 118, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxmkl"]
+atlas = ExtResource("7_f11hv")
+region = Rect2(118, 0, 118, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kufaf"]
+atlas = ExtResource("7_f11hv")
+region = Rect2(236, 0, 118, 111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w6jm"]
+atlas = ExtResource("7_f11hv")
+region = Rect2(354, 0, 118, 111)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnwsp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k0fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxmkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kufaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w6jm")
+}],
+"loop": false,
+"name": &"Shot",
+"speed": 25.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(513, 288)
 collision_layer = 2
 collision_mask = 8
 script = ExtResource("1_x5avv")
 projectile = ExtResource("2_cf132")
+bullet = ExtResource("3_s8sop")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_7qn8d")
@@ -331,4 +370,17 @@ sprite_frames = SubResource("SpriteFrames_b12s4")
 animation = &"gun_walking"
 frame_progress = 0.523029
 
+[node name="Muzzle" type="AnimatedSprite2D" parent="."]
+position = Vector2(109, 24)
+rotation = 1.5708
+scale = Vector2(0.324745, 0.324745)
+sprite_frames = SubResource("SpriteFrames_dnwsp")
+animation = &"Shot"
+frame = 3
+frame_progress = 1.0
+
+[node name="BulletLocation" type="Marker2D" parent="."]
+position = Vector2(95, 21)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="ready" from="Muzzle" to="." method="_on_muzzle_ready"]

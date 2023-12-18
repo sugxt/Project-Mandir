@@ -5,12 +5,15 @@ extends CharacterBody2D
 @export var acceleration = 1200
 @export var friction = 1200
 @export var projectile: PackedScene
+@export var bullet: PackedScene
 @export var shooting_delay: float = 0.7
 var has_gun: bool = false
 var can_shoot: bool = true
 var gun_ammo: int = 0
 
+
 @onready var axis = Vector2.ZERO
+
 
 func get_input():
 	if Input.is_action_just_pressed("shoot") and can_shoot and !has_gun:
@@ -78,10 +81,11 @@ func shoot():
 		can_shoot = true
 func shoot_gun():
 	if can_shoot and gun_ammo>0:
+		muzzle()
 		gun_ammo -= 1
-		var a = projectile.instantiate()
+		var a = bullet.instantiate()
 		owner.add_child(a)
-		a.transform = $Marker2D.global_transform
+		a.transform = $BulletLocation.global_transform
 		can_shoot = false
 		await get_tree().create_timer(0.2).timeout
 		can_shoot = true
@@ -102,3 +106,11 @@ func get_item(item):
 		max_speed = 800
 		await get_tree().create_timer(20).timeout
 		max_speed = 400
+
+func muzzle():
+	$Muzzle.show()
+	$Muzzle.play("Shot")
+	await $Muzzle.animation_finished
+	$Muzzle.hide()
+func _on_muzzle_ready():
+	$Muzzle.hide()
