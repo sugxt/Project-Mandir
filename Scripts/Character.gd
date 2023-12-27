@@ -87,7 +87,7 @@ func shoot_gun():
 		owner.add_child(a)
 		a.transform = $BulletLocation.global_transform
 		can_shoot = false
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.1).timeout
 		can_shoot = true
 		if gun_ammo <= 0:
 			has_gun = false

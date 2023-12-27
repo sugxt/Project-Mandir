@@ -8,6 +8,7 @@ func _physics_process(delta):
 	look_at(player.global_position)
 	var direction = (player.global_position - self.position).normalized()
 	self.position += direction * speed * delta
+	$AnimatedSprite2D.play("default")
 	
 func onDamage(damage_number):
 	print("damage called: ",damage_number)

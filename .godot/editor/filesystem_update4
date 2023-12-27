@@ -1,10 +1,7 @@
 res://default_env.tres
-res://Scenes/Character.tscn
-res://Scripts/Character.gd
 res://Scenes/Khukri.tscn
-res://Scenes/Kurkri.tscn
-res://Scenes/Main Scene.tscn
-res://Scenes/speed_pickup.tscn
-res://Scenes/gun_pickup.tscn
-res://Bullet.gd
 res://Scenes/bullet.tscn
+res://Scenes/Character.tscn
+res://Scenes/Main Scene.tscn
+res://Scenes/Kurkri.tscn
+res://Scripts/Character.gd

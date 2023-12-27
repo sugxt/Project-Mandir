@@ -1,16 +1,80 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccdshj4ksavcw"]
+[gd_scene load_steps=9 format=3 uid="uid://ccdshj4ksavcw"]
 
 [ext_resource type="PackedScene" uid="uid://dltmo82lb40fm" path="res://Scenes/Character.tscn" id="1_bq4t2"]
 [ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_mdosw"]
 [ext_resource type="PackedScene" uid="uid://dxix6os1mjax8" path="res://Scenes/Kurkri.tscn" id="3_84htg"]
 [ext_resource type="PackedScene" uid="uid://i2mn8ydv7ni3" path="res://Scenes/gun_pickup.tscn" id="4_80d6l"]
 [ext_resource type="PackedScene" uid="uid://ioyx7r780d6r" path="res://Scenes/speed_pickup.tscn" id="5_xg0rv"]
+[ext_resource type="Texture2D" uid="uid://cwnx1diqxsa6q" path="res://Assets/Map/Dirt_1.png" id="6_3wl15"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kf7wv"]
+texture = ExtResource("6_3wl15")
+texture_region_size = Vector2i(17, 22)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+7:6/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+6:2/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+6:5/0 = 0
+6:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0jl7n"]
+sources/0 = SubResource("TileSetAtlasSource_kf7wv")
 
 [node name="Main" type="Node2D"]
 
 [node name="Example Arena" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0.34902, 0.196078)
-position = Vector2(72.5, 3.50001)
+position = Vector2(90, 160)
 scale = Vector2(3.72286, 1.86571)
 texture = ExtResource("1_mdosw")
 
@@ -26,7 +90,11 @@ position_smoothing_speed = 3.0
 [node name="Enemy" parent="." instance=ExtResource("3_84htg")]
 position = Vector2(1326, -308)
 
-[node name="Node2D" parent="." instance=ExtResource("4_80d6l")]
+[node name="Gun Pickup" parent="." instance=ExtResource("4_80d6l")]
 
 [node name="Speed Pickup" parent="." instance=ExtResource("5_xg0rv")]
 position = Vector2(-278, 209)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_0jl7n")
+format = 2
