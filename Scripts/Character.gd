@@ -10,6 +10,7 @@ extends CharacterBody2D
 var has_gun: bool = false
 var can_shoot: bool = true
 var gun_ammo: int = 0
+@onready var camera = get_node("Camera2D")
 
 
 @onready var axis = Vector2.ZERO
@@ -81,13 +82,14 @@ func shoot():
 		can_shoot = true
 func shoot_gun():
 	if can_shoot and gun_ammo>0:
+		#camera.apply_shake() #Camera Shake Call
 		muzzle()
 		gun_ammo -= 1
 		var a = bullet.instantiate()
 		owner.add_child(a)
 		a.transform = $BulletLocation.global_transform
 		can_shoot = false
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.175).timeout
 		can_shoot = true
 		if gun_ammo <= 0:
 			has_gun = false
@@ -104,8 +106,10 @@ func get_item(item):
 		gun_ammo = 10
 	if item == "Speed":
 		max_speed = 800
+		$AnimatedSprite2D.speed_scale = 2
 		await get_tree().create_timer(20).timeout
 		max_speed = 400
+		$AnimatedSprite2D.speed_scale = 1
 
 func muzzle():
 	$Muzzle.show()

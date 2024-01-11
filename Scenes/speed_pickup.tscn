@@ -1,10 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://ioyx7r780d6r"]
+[gd_scene load_steps=6 format=3 uid="uid://ioyx7r780d6r"]
 
 [ext_resource type="Script" path="res://Speed Pickup.gd" id="1_spt3v"]
-[ext_resource type="Texture2D" uid="uid://bcd8yjvouk7aw" path="res://Assets/JoyStick-Inner.png" id="2_e2wny"]
+[ext_resource type="Texture2D" uid="uid://t1vd3ly7434f" path="res://Assets/PickUps/Speed_Up.png" id="2_oklyx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1dgw6"]
-radius = 49.0
+radius = 40.2616
+
+[sub_resource type="Animation" id="Animation_ev335"]
+resource_name = "Scale Up"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 2.14355, 0.406126),
+"update": 0,
+"values": [Vector2(2.5, 2.25), Vector2(1.805, 1.589), Vector2(2.5, 2.25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r3mkt"]
+_data = {
+"Scale Up": SubResource("Animation_ev335")
+}
 
 [node name="Speed Pickup" type="Area2D"]
 position = Vector2(664, 341)
@@ -13,9 +34,17 @@ collision_mask = 2
 script = ExtResource("1_spt3v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_1dgw6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_e2wny")
+position = Vector2(-3.05176e-05, -5.74998)
+scale = Vector2(1.805, 1.589)
+texture = ExtResource("2_oklyx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r3mkt")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

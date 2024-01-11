@@ -1,10 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://i2mn8ydv7ni3"]
+[gd_scene load_steps=7 format=3 uid="uid://i2mn8ydv7ni3"]
 
 [ext_resource type="Script" path="res://gun_pickup.gd" id="1_4b00f"]
-[ext_resource type="Texture2D" uid="uid://djqj35qtcrbit" path="res://Assets/JoyStick-Outer.png" id="1_d7jc0"]
+[ext_resource type="Texture2D" uid="uid://b7ngxp026jeqs" path="res://Assets/PickUps/Gun.png" id="2_87ivc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sot48"]
-radius = 33.0606
+radius = 31.0
+
+[sub_resource type="Animation" id="Animation_qg3nb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1.62451),
+"update": 0,
+"values": [Vector2(0.896169, 0.896169)]
+}
+
+[sub_resource type="Animation" id="Animation_cd8da"]
+resource_name = "scale_up"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.896169, 0.896169), Vector2(1.229, 1.229), Vector2(0.896169, 0.896169)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78pt1"]
+_data = {
+"RESET": SubResource("Animation_qg3nb"),
+"scale_up": SubResource("Animation_cd8da")
+}
 
 [node name="Node2D" type="Area2D"]
 position = Vector2(330, 189)
@@ -12,12 +49,17 @@ collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_4b00f")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, -1)
-scale = Vector2(0.201429, 0.201429)
-texture = ExtResource("1_d7jc0")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sot48")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0.999985)
+scale = Vector2(0.896169, 0.896169)
+texture = ExtResource("2_87ivc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_78pt1")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

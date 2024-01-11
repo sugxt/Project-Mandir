@@ -1,13 +1,13 @@
 2a60927148abd1d33b818b535e306557
-::res://::1703561141
+::res://::1704949586
 Bullet.gd::GDScript::-1::1702907747::0::1::::<>Area2D<>::
-default_env.tres::Environment::8113903724890298971::1703561141::0::1::::<><>::
-gun_pickup.gd::GDScript::-1::1702479704::0::1::::<>Area2D<>::
+default_env.tres::Environment::8113903724890298971::1704773503::0::1::::<><>::
+gun_pickup.gd::GDScript::-1::1704639574::0::1::::<>Area2D<>::
 icon.png::CompressedTexture2D::1899934213244536424::1701766590::1701781193::1::::<><>::
 README.md::TextFile::-1::1701767355::0::1::::<><>::
 README_PT-BR.md::TextFile::-1::1701767856::0::1::::<><>::
-Speed Pickup.gd::GDScript::-1::1702714485::0::1::::<>Area2D<>::
-::res://Assets/::1703561367
+Speed Pickup.gd::GDScript::-1::1704638961::0::1::::<>Area2D<>::
+::res://Assets/::1704635094
 Circle.png::CompressedTexture2D::7470904067548570248::1702266131::1702266134::1::::<><>::
 ezgif.com-gif-maker.png::CompressedTexture2D::1335688620273615753::1701872718::1701872718::1::::<><>::
 gun_idle.png::CompressedTexture2D::8103421029528154747::1702476495::1702476499::1::::<><>::
@@ -24,19 +24,26 @@ Zombie1_Walking.png::CompressedTexture2D::9016270158547970931::1703050757::17030
 ::res://Assets/Entities/::1702905958
 Bullet.png::CompressedTexture2D::8675620300701797498::1702905941::1702905958::1::::<><>::
 Muzzle_Flash.png::CompressedTexture2D::1002601191159605379::1702905922::1702905958::1::::<><>::
-::res://Assets/Map/::1703561370
-Dirt_1.png::CompressedTexture2D::6345275930387744430::1703561370::1703561372::1::::<><>::
-::res://Scenes/::1703561141
-bullet.tscn::PackedScene::8800274934067462076::1703561140::0::1::::<><>::res://Bullet.gd<>uid://dvusg0301ml6q
-Character.tscn::PackedScene::7971317888935230130::1703561140::0::1::::<><>::res://Scripts/Character.gd<>uid://rc5qv8cbifbv<>uid://dxm6iiinbl2jw<>uid://cl1hlsoxdym57<>uid://dnpmfppuwj2t8<>uid://bv34vrshcv2h5<>uid://cbo8ht6wmouep<>uid://ojwxvtv8brjv
-gun_pickup.tscn::PackedScene::618002538209337360::1702906770::0::1::::<><>::res://gun_pickup.gd<>uid://djqj35qtcrbit
-Khukri.tscn::PackedScene::1199190333901568539::1703561140::0::1::::<><>::res://Scripts/Khukri.gd<>uid://deo7x0pbw8iiq
-Kurkri.tscn::PackedScene::8791573091562299767::1703561141::0::1::::<><>::res://Scripts/Kurkri.gd<>uid://d1pswf71bb6p8
-Main Scene.tscn::PackedScene::4920518112339488846::1703561141::0::1::::<><>::uid://dltmo82lb40fm<>uid://djqj35qtcrbit<>uid://dxix6os1mjax8<>uid://i2mn8ydv7ni3<>uid://ioyx7r780d6r
-speed_pickup.tscn::PackedScene::591912027255203155::1702906770::0::1::::<><>::res://Speed Pickup.gd<>uid://bcd8yjvouk7aw
-::res://Scripts/::1703561139
+::res://Assets/Map/::1704636319
+Dirt_1.png::CompressedTexture2D::6345275930387744430::1704285839::1704285841::1::::<><>::
+Dirt_Tile.png::CompressedTexture2D::3856815194202607889::1704373756::1704373757::1::::<><>::
+Grass_Tile_2.png::CompressedTexture2D::3566509132310419388::1704373294::1704373365::1::::<><>::
+Low_Grass.png::CompressedTexture2D::3339221515234141516::1704285394::1704285395::1::::<><>::
+Tree.png::CompressedTexture2D::5149216208241819248::1704636318::1704636319::1::::<><>::
+::res://Assets/PickUps/::1704635250
+Gun.png::CompressedTexture2D::4659706793868230170::1704635117::1704635250::1::::<><>::
+Speed_Up.png::CompressedTexture2D::1388543753739018615::1704635100::1704635250::1::::<><>::
+::res://Scenes/::1704773503
+bullet.tscn::PackedScene::8800274934067462076::1704286076::0::1::::<><>::res://Bullet.gd<>uid://dvusg0301ml6q
+Character.tscn::PackedScene::7971317888935230130::1704773502::0::1::::<><>::res://Scripts/Character.gd<>uid://rc5qv8cbifbv<>uid://dxm6iiinbl2jw<>uid://cl1hlsoxdym57<>uid://dnpmfppuwj2t8<>uid://bv34vrshcv2h5<>uid://cbo8ht6wmouep<>uid://ojwxvtv8brjv
+gun_pickup.tscn::PackedScene::618002538209337360::1704773503::0::1::::<><>::res://gun_pickup.gd<>uid://b7ngxp026jeqs
+Khukri.tscn::PackedScene::1199190333901568539::1704286076::0::1::::<><>::res://Scripts/Khukri.gd<>uid://deo7x0pbw8iiq
+Kurkri.tscn::PackedScene::8791573091562299767::1704286077::0::1::::<><>::res://Scripts/Kurkri.gd<>uid://d1pswf71bb6p8
+Main Scene.tscn::PackedScene::4920518112339488846::1704773503::0::1::::<><>::uid://dltmo82lb40fm<>uid://bq2v5cj6tc6r5<>uid://bu7jghjh135dt<>uid://dxix6os1mjax8<>uid://cfmk3rp5uxu2s<>uid://i2mn8ydv7ni3<>uid://ioyx7r780d6r
+speed_pickup.tscn::PackedScene::591912027255203155::1704773503::0::1::::<><>::res://Speed Pickup.gd<>uid://t1vd3ly7434f
+::res://Scripts/::1704637086
 Camera2D.gd::GDScript::-1::1702732937::0::1::::<>Camera2D<>::
-Character.gd::GDScript::-1::1703561139::0::1::::<>CharacterBody2D<>::
+Character.gd::GDScript::-1::1704637086::0::1::::<>CharacterBody2D<>::
 Joystick.gd::GDScript::-1::1701781168::0::1::::<>Node2D<>::
 Khukri.gd::GDScript::-1::1702269168::0::1::::<>Area2D<>::
 Knob.gd::GDScript::-1::1701781168::0::1::::<>Sprite2D<>::
